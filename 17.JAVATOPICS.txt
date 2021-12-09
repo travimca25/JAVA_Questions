@@ -1,0 +1,79 @@
+JAVA Interview::
+=============================
+1.Java 8 Features and Programs on Streams & Labda functions,Completable Feature
+2.Design patterns [Builder,Singleton,Factory,Adaptor,Proxcy,Bridge],Saga,segrigatore,Stranglore,CQRS,
+3.Programs Collections in Java
+4.Programs [Algarithms]
+5.Spring Boot
+6.Micro services 
+7.Spring IOC,Transactions,Schedulers,Exception Mapper
+8.Hibername [Caching,Mappings,Configurations]
+9.AWS cloud Deployment
+10.Thread dump & Heap Dump Analisys
+11.Graphite and graphana
+12.AMQ
+13.SQL
+14.NoSQL[MongoDB]
+=========================
+Fault Tolerence [Resilency4J[BulkHead]]=>
+WireMock Annotations
+OAuth2
+=====================
+Spring boot :
+
+
+
+================================================================================================================================================
+https://spring.io/guides/gs/spring-boot/
+https://www.youtube.com/watch?v=BnknNTN8icw&ab_channel=DailyCodeBuffer
+https://www.youtube.com/watch?v=v8CsnghDA2g&list=PLO0KWyajXMh4u-DhB7bXoRQ21rfkF_cSU&index=1&ab_channel=SimpleProgramming
+https://www.youtube.com/watch?v=tuJqH3AV0e8&ab_channel=edureka%21
+https://piotrminkowski.com/2020/06/19/distributed-transactions-in-microservices-with-spring-boot/#:~:text=A%20transaction%20server%20is%20responsible,transactions%20and%20updating%20their%20status.
+
+https://www.vinsguru.com/choreography-saga-pattern-with-spring-boot/
+
+
+==============================
+
+Binary Search:
+Circular LinkedList:
+
+https://www.youtube.com/watch?v=6iCHf7OZn6c&list=PL6Zs6LgrJj3tDXv8a_elC6eT_4R5gfX4d&ab_channel=DineshVaryani
+
+
+https://github.com/vjkandala
+
+
+
+=========================================================================================================
+Micro services: [Design Patterns]
+Docker:
+Spring Boot :
+Spring Cloud:
+Java 8:
+
+======================
+SingleTon
+ArraList
+HashMap
+LinkedList,Double Linkedlist,Circular LinkedList
+String work replacement.
+Word replace without using Defaultmethods?
+Binary search?
+Graph program search
+Java 8 Programs?
+Sorting base,Heap,Bouble
+Serialization ,Deserialization
+Immutable class?
+Cloning
+Sorting comparator and Comparable?
+what recently u have done the complex task?
+
+
+
+
+
+
+
+
+

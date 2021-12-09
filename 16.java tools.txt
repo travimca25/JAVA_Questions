@@ -1,0 +1,28 @@
+Micro services Architecture
+SpringBoot 2.3 with OPUS FrameWork 
+Spring 5
+Hibernate 5
+Postgres 10
+Oracle 12g
+AMQ
+Swagger
+java 8
+Slf4J with Log4J2
+ZipKin
+KIBANA and Filebeat
+https://heaphero.io/
+Graphana and Graphite
+SonarLint
+BeyondCompare
+GitHub
+Postman
+Eclipse java 2019-03
+https://fastthread.io/
+JIRA
+Confluence
+Zookeper[Service Discovery]
+MongoDB
+======================
+
+
+
