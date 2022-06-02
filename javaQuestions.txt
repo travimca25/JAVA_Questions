@@ -1,0 +1,270 @@
+1.How you have implemented Security for your Application
+ans) Basic Athontication/ O Auth2 /JWT
+2.What all the design patterns you have worked on?
+ans) Singleton,Factory,Builder ...etc
+3.What is completableFeature and have u worked on it?
+Ans) It is used for Asyncronous programming in java.We have not used but i know that it is for Asyncronues programing we use in java8 onwards.
+====================================================================
+1.Java 8 Advantages?
+	ANS: More compact code
+		Less boiler plate code
+		More readable and reusable code
+		More testable code
+		Parallel operations
+------------------------------------------------------------------------------------------------------------------------------
+2.java 8 features?
+	Ans :Lambda Expression
+		Stream API
+		Default methods in the interface
+		Functional Interface
+		Optional
+		Method references
+		Date API
+		Nashorn, JavaScript 
+------------------------------------------------------------------------------------------------------------------------------
+3.What is functional Interface? Example ? Why we will use it?
+	  Ans :	Functional interfaces are those interfaces which have only one abstract method, it can have default methods, static methods and it can also override java.lang.Object class method.
+			There are many functional interfaces already present.
+			For example: Runnable , Comparable.
+------------------------------------------------------------------------------------------------------------------------------
+4.What is lambda Expression?Why we will use?
+	ANS: Lambda Expression is a function without Java lambda expressions are Java's first step into functional programming.
+		A Java lambda expression is thus a function which can be created without belonging to any class. ... 
+------------------------------------------------------------------------------------------------------------------------------
+5.Can we use lambda Expression for Non Functional Interfaces?
+ANS) 
+------------------------------------------------------------------------------------------------------------------------------
+6.What is default Method in Java 8?Why?
+   ANS : The default methods were introduced to provide backward compatibility so that existing interfaces can use
+         the lambda expressions without implementing the methods in the implementation class. ...  
+		 Default methods are also known as defender methods or virtual extension method
+------------------------------------------------------------------------------------------------------------------------------
+7.Can we have more default methods in Functional Interface?
+ans)
+------------------------------------------------------------------------------------------------------------------------------
+8.I have
+	 class Super
+	{
+	m1();
+	}
+	 and 
+	 Class Sub extends Super
+	 {
+	 m1(); correct
+	 m2(); wrong
+	 }
+------------------------------------------------------------------------------------------------------------------------------
+8.What is a Stream API? Why do we require the Stream API?
+
+	Answer:the Stream API is used to process collections of objects.
+			A stream is a sequence of objects that supports various methods which can be pipelined to produce the desired result. ...
+			Streams don't change the original data structure, they only provide the result as per the pipelined methods.
+	
+------------------------------------------------------------------------------------------------------------------------------
+9.Difference b/w Anonimus inner class and Lambda Expression.
+
+Ans)Anonimus Inner class will provide the Body for Interface .
+Lambda Expression will provide the body for Functional Interface
+     
+------------------------------------------------------------------------------------------------------------------------------
+10.What is method reference? 
+ ANS:  Method reference is used to refer method of functional interface. 
+       1.It is compact and easy form of lambda expression. Each time when you are using lambda expression to just referring a method, 
+       you can replace your lambda expression with method reference.
+	   2.The biggest benefit of the method reference or constructor reference is that they make the code even shorter by eliminating 
+	   lambda expression, which makes the code more readable.
+	   3.The :: operator is used in method reference to separate the class or object from the method
+------------------------------------------------------------------------------------------------------------------------------
+11.Why Optional class in Java 8?
+ANs) To avoid null pointer checks
+------------------------------------------------------------------------------------------------------------------------------
+12.what are Example of Intermediate operations?
+
+filter(Predicate :Predicate is single argument function which returns true or false. It has test method which returns boolean)
+map(Function)
+flatmap(Function)
+sorted(Comparator)
+distinct()
+limit(long n)
+skip(long n)
+------------------------------------------------------------------------------------------------------------------------------
+13.What are Example of terminal operations ?
+
+	ANS:forEach(consumer : Consumer is single argument functional interface which does not return any value )
+		toArray
+		reduce
+		collect
+		min
+		max
+		count
+		anyMatch
+		allMatch
+		noneMatch
+		findFirst
+		findAny
+------------------------------------------------------------------------------------------------------------------------------
+14.Why Date api in java 8 [JODA]
+     ANS: JODA.rog is developed this Date and Time api.Before this there are no convinient methos to use and performence was low
+		Current Local Date: " + java.time.LocalDate.now()
+        Current Local Time: " + java.time.LocalTime.now()
+        Current Local Date and Time: " + java.time.LocalDateTime.now()
+		
+		------------------------------------------------
+		LocalDate date = LocalDate.now()
+		int dd = date.getDayOfMonth();	
+		mm = date.getMonthValue();
+		yyyy = date.getYear();
+		-------------------------------------
+		LocalTime time = LocalTime.now()
+		time.getHour();
+		time.getMonute();
+		time.getSecond(0;
+		time.getNano();
+		----------------------------------------
+		All the above 6 methods available from LocalDateTime.now();
+		-------------------------------------------------
+		ZoneId zi = ZoneId.systemDefault();
+		ZoneId zi1 =ZoneId.of("America/Los Angeles")
+		ZonedDateTime zdt = ZonedDateTime.now(zi1);
+		
+------------------------------------------------------------------------------------------------------------------------------		
+15.What is the Difference Between Map and flatMap Stream Operation?
+
+		ANS: Map is used for simple operation and flatMap is Used for Complex Operations.
+		List of Strings are there then need to convers to LOWER or UPPER CASE then Use Map
+		List of Strings are there then need to find the Strings start with 'R' Then we can use for FlatMap.
+
+=================================================================================	
+MAP Example :  Names = Arrays.asList("Saket", "Trevor", "Franklin", "Michael")
+---------------------------------------------------------------------------------------
+				List<String> upperCase = Names.stream().map(String::toUpperCase).collect(Collectors.toList());
+				upperCase.forEach(System.out::println);
+=================================================================================
+FlatMap Example :  List<List<String>> Names = Arrays.asList(Arrays.asList("Saket", "Trevor"), Arrays.asList("John", "Michael"),
+										Arrays.asList("Shawn", "Franklin"), Arrays.asList("Johnty", "Sean"));
+-----------------------------------------------------------------------------------------------------------------------------										
+					List<String> start = Names.stream().flatMap(FirstName -> FirstName.stream()).filter(s -> s.startsWith("S")).collect(Collectors.toList());
+					start.forEach(System.out::println);
+------------------------------------------------------------------------------------------------------------------------------
+17.How to remove the duplicate from a list using java8?
+ArrayList List = Arrays.asList("Saket", "Trevor", "Franklin", "Michael","Saket")
+Ans:    Set<Integer> result = list.stream().collect(Collectors.toSet());
+------------------------------------------------------------------------------------------------------------------------------		
+16.What is MetaSpace in Java 8?
+Ans : In Java 8, a new feature was introduced to store classes. The area where all the classes that are stored in Java 8 
+	are called MetaSpace. MetaSpace has replaced the PermGen.
+    Till Java 7, PermGen was used by Java Virtual Machine to store the classes. Since MetaSpace is dynamic 
+    as it can grow dynamically and it does not have any size limitation, Java 8 replaced PermGen with MetaSpace.
+------------------------------------------------------------------------------------------------------------------------------
+18.Join in String ?
+		Ans : List<String> employeeNames = employeeList.stream().map(Employee::getName).collect(Collectors.toList());
+        String employeeNamesStr = String.join(",", employeeNames);
+------------------------------------------------------------------------------------------------------------------------------
+19.How to group the employees based on name ?
+		Ans :  Map<String, List<Employee>> map = employeeList.stream().collect(Collectors.groupingBy(Employee::getName));
+        map.forEach((name,employeeListTemp)->System.out.println("Name: "+name+" ==>"+employeeListTemp))
+------------------------------------------------------------------------------------------------------------------------------
+20.Parler and ParallelStream();
+https://www.geeksforgeeks.org/what-is-java-parallel-streams/
+1
+2
+3
+5
+4
+7 .... so on i have 1 crore records.
+
+1.Need to find the >100000 numbers and count of the numbers ?Order is not Required?
+
+------------------------------------------------------------------------------------------
+=======================================================================================================================================================
+Oracle:
+==================
+
+1.Table design for many to many
+2.What are the DB Constrains then when we will use what?
+3.If u need data dump how u will get and how to load data to lower env?
+4.Triggers
+5.Why Views in DB?
+6.Composit Key
+
+Mongo DB:
+==========
+Why mongo Db is Used?
+=======================================
+AMQ:
+
+Why we will use Messaging Queue?
+How to process Failed messages using AMQ?
+Do you know about Dead Letter Queue?
+
+Spring Boot:
+=======================
+What version of Spring Boot ?
+Why Spring Boot ?
+How to do Spring Boot Profiling?
+How to register the Controllers in Spring Boot?
+
+
+
+Spring:
+==========
+How to Use Spring Transactions?
+
+Hibernate:
+===========
+Have u implemented Auditing Using Hibernate?
+How to implement Hibernate First Levenl and 2nd Level Cache?
+What is difference b/w JPA/Hibernate?
+
+Prod Issues Analisys:
+======================
+ZipKin 
+HeapDump
+ThreadDump
+KIBANA
+Graphana
+===========================================================================
+1.Liquibase concept?
+ans) Yes If we want to control the SQL script to execute in DB in a better manner then we can go for Liquibase Scripts.
+3.Have u worked on Itext and POI apis?
+ANS) Yes .Itext for Excel generation and POI for PDF Generation
+
+4.Why API Versining?
+ANS)If we want to generate different Output for Different Customers for single API then we can go for Open API.
+
+======================================================
+
+I have employees List ? id,name,sal,Rating,Designation?Answer below questions
+
+ravi => 1,ravi,5000,4,SE
+Akil=> 2,akil,15000,2,SSE
+Anusha=> 3,anusha,25000,3,SSE
+Lavanya=> 4,lavanya,5000,4,SE
+Abhith=> 5,abhith,25000,3,SSE
+Gautham=> 6,gautham,15000,3,SSE
+Raju=> 7,ravi,15000,3,SSE
+Ramesh=> 8,ramesh,5000,1,SE
+-----------------------------------------------------------------
+1.Whose rating is 4 then they should get pramotion and 15 % hike.
+2.Whose Rating is 3 then they shouls get the 10 % hike
+3.Whose Rating is 1 then their salory is no increment.
+4.Need to display the Employees list group by Grade.
+
+======================================================================================
+Question) I have 3 different balls with 3 different colours like foot ball,cricket ball,base ball.
+	If i will pass ball name and colour then i should get the count of the Balls?
+ANS)	 Map<String,Map<String,List<Integer>>
+============================================================================================
+I have List of Vehicles[vin,vehicleId,chassisNo,chassidSeries] and i need to Display in decending order based on VIN in java 8?
+
+V1=> 123ABC,111,ABC,123
+V2=> 223DBC,222,DBC,223
+V3=> A23EBC,333,EBC,323
+V4=> 023FBC,444,FBC,423
+===================================================================
+
+
+
+
+
+
